@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.box{
+	background-color:#00f;
+	position:absolute;
+	left:50%;
+	top:30%;
+	width:130px;
+	height:30px;
+	text-align:center;
+	padding-top:10px;
+	cursor:pointer;
+	
+	-webkit-transition:all 1s;
+}
