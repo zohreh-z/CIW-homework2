@@ -5,15 +5,7 @@ window.onload=function(){
 	function birthday(){
 		var now=new Date();
 		now1=new Date(now.getTime()-bday.getTime());
-	
-		var time;
-		time=now1.getFullYear()-1970+' Year ';	
-		time+=now1.getMonth()+' Month ';
-		time+=now1.getDay()+' Day ';
-		time+=now1.getHours()+' Hours ';
-		time+=now1.getMinutes()+' Minutes ';
-		time+=now1.getSeconds()+' Seconds ';
-		document.getElementById('txt').innerHTML=time;
+		document.getElementById('txt').innerHTML=now1.getFullYear()-1970+' Year '+now1.getMonth()+' Month '+now1.getDay()+' Day '+now1.getHours()+' Hours '+now1.getMinutes()+' Minutes '+now1.getSeconds()+' Seconds ';;
 	}
 	setInterval(birthday,50);
 
