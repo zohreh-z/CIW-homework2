@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<style type="text/css">
+
+*{
+	padding:0;
+	margin:0;
+	-webkit-transition:all 2s;
+}
+
+body{
+	background-color:#000;
+}
+
+div.box{
+	width:700px;
+	height:300px;
+	line-height:300px;
+	background-color:#96F;
+	box-shadow:1px 1px 13px  #ccc;
+	margin:120px auto 0;
+	border-radius:10px;
+	overflow:hidden;
+}
+
+body.preload div.box{
+	width:0px;
+	height:0px;
+	margin-top:250px;
+	overflow:hidden;
+}
+
+div.box div.text{
+	width:200px;
+	margin:0 auto;
+	font-size:18px;
+	text-shadow:1px 1px 1px #ccc,-1px -1px 1px #777;
+}
+
+/*div.box div.text1{
+	width:150px;
+
+outline:1px dashed red;
+float:left;
+
+}*/
+
+</style>
+<script type="text/javascript">
+
+	window.onload=function(){
+		document.body.className='';
+	}
+
+</script>
+
+<body class="preload">
+
+	<div class="box">
+<!--		<div class="text1">hello  a preload test</div>-->
+		<div class="text">hello this is a preload test</div>
+	</div>
+
+</body>
+</html>
