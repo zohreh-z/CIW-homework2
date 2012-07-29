@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.slide{
+	width:980px;
+	margin:0 auto;
+	padding-top:1px;
+}
+
+div.slide div.scroll{
+	width:980px;
+	height:570px;
+	margin-top:15px;
+	overflow:hidden;
+	position:relative;
+}
+
+div.slide div.scroll div.train{
+	width:4000px;
+	height:534px;
+	position:absolute;
+	top:0;
+	left:0;
+	-webkit-transition:left 1s;
+}
+
+div.slide div.scroll div.train > div{
+	width:980px;
+	height:inherit;
+	float:left;
+	background-repeat:no-repeat;
+	background-position:center top;
+	background-size:cover;
+}
+
+div.scroll ul.btn{
+	list-style:none;
+	width:150px;
+	height:12px;
+	position:absolute;
+	bottom:0px;
+	right:0;
+
+}
+
+div.scroll ul.btn li{
+	background-color:#222;
+	margin-right:8px;
+	float:left;
+	width:20px;
+	height:10px;
+	cursor:pointer;
+	-webkit-transition:all 1200ms;
+}
+
+div.scroll ul.btn li:hover,
+div.scroll ul.btn li.active{
+	background-color:#39D;
+	height:20px;
+	margin-top:-5px;
+	-webkit-transition-duration:300ms;
+}
+/*div.slide div.scroll .train >div{
+	width:980px;
+}*/
