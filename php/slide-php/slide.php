@@ -15,23 +15,23 @@
 		<div class="scroll">
 			<div class="train">
 				<?php
-					$path = './images/';
+					$path = '../images/gallery/';
 					$files=scandir($path);
 					$len=0;
 					foreach($files as $file){
-						$type=end(explode('.',$file));
+						$type = explode('.',$file);
+						$type = end($type);
 						if($type == 'jpg'){
 							echo "<div><img src='$path/$file' ></div>";
 							$len++;
-							}
+						}
 					}
 				?>
-				
 			</div>
 			<div class="next"></div>
 			<div class="prev"></div>
 			<ul class="btn">
-			<?php
+				<?php
 					for($i=0;$i<$len;$i++){
 						echo "<li></li>";
 					}
@@ -40,5 +40,6 @@
 		</div>
 	</div>
 </div>
+
 </body>
 </html>
