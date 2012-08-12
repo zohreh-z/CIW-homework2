@@ -25,7 +25,7 @@ $(function(){
 	(autoPlayStart=function(){
 		if(flag) return;
 		t=setInterval(autoplay,2000);	
-	});
+	})();
 	
 	(autoPlayStop=function(){
 		clearInterval(t);
