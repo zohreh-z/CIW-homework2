@@ -6,7 +6,7 @@
 <link type="text/css" rel="stylesheet" href="../reset.css" />
 <link type="text/css" rel="stylesheet" href="slide.css" />
 <!--[if IE]>
-		<script type="text/javascript" src="js/html5.js"></script>
+		<script type="text/javascript" src="../html5.js"></script>
 	<![endif]-->
 <script type="text/javascript" src="../zepto.js" ></script>
 <script type="text/javascript" src="slide.js" ></script>
