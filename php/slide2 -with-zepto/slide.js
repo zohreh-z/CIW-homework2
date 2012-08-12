@@ -1,8 +1,8 @@
 //Zepto
 $(function(){
 
-	var slides	= $('div.scroll div.train'),
-		train	 = $('div.scroll div.train > div'),
+	var slides	= $('div.scroll'),
+		train	 = $('div.scroll div.train'),
 		lists	  = $('div.scroll ul.btn li'),
 		current=0,picsize=640,flag=false;
 	
@@ -17,59 +17,38 @@ $(function(){
 
 	})(0);
 	
-	lists.click(function(){
-		gotoslide($(this).index());
-	})
-})
-
-
-// JavaScript Document
-/*
-tm=function(){
-	var slide=document.getElementsByClassName('scroll').item(0);
-	var train=slide.getElementsByClassName('train').item(0);
-	var lists=slide.getElementsByClassName('btn').item(0).getElementsByTagName('li');
 	
-		
-	autoPlayStart=function(){
+	(autoplay=function(){
+		gotoslide(current+1);
+	});
+	
+	(autoPlayStart=function(){
 		if(flag) return;
 		t=setInterval(autoplay,2000);	
-	}
+	});
 	
-	autoPlayStop=function(){
+	(autoPlayStop=function(){
 		clearInterval(t);
 		flag=false;
-	}
+	});
 	
-	gotoslide=function(n){
-		if(n>=lists.length) n=0;
-		if(n<0) n=lists.length-1;
-		train.style.left=(-n*picsize)+'px';
-		lists.item(current).className='';
-		lists.item(n).className='active';
-		current=n;
-	}
-	
-	prvSlide=function(){
+	(prvSlide=function(){
 		gotoslide(current-1);
-	}
+	});
 	
-	autoplay=function(){
+	$('div.scroll .next').click(autoplay=function(){
 		gotoslide(current+1);
-	}
+	});
 	
-	for(var i=0;i<lists.length;i++){
-		(function(j){
-			lists.item(j).onclick=function(){
-				gotoslide(j);
-			}
-		})(i);
-	}
+	$('div.scroll .prev').click(function(){
+		gotoslide(current-1);
+	});
 	
-	slide.getElementsByClassName('prev').item(0).onclick=prvSlide;
-	slide.getElementsByClassName('next').item(0).onclick=autoplay;
-	slide.onmouseover=autoPlayStop;
-	slide.onmouseout=autoPlayStart;
-	gotoslide(0);
-	autoPlayStart();
-}*/
+	lists.click(function(){
+		gotoslide($(this).index());
+	});
+	
+	slides.mouseover(autoPlayStop);
+	slides.mouseout(autoPlayStart);
+	
+})
